@@ -60,6 +60,9 @@ export default defineComponent({
                     users.push(user);
                 }
             } catch(err) {
+                users.push({
+                    name: 'No hay usuarios que mostrar.'
+                });
                 console.log('Error getting users!');
             }
         };
