@@ -82,7 +82,7 @@ export default defineComponent({
         const onLogin = async () => {
             try {
                 const response = await UsersService.login(user);
-                let data = response.json;
+                let data = await response.json();
                 //redirect to users page
                 router.push('/users');
             } catch(err) {

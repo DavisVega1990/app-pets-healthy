@@ -62,7 +62,7 @@ export default defineComponent({
         const getUsers = async () => {
             try {
                 const response = await UsersService.getAll();
-                const data = response.json;
+                const data = await response.json();
                 for (const user of data) {
                     users.push(user);
                 }
