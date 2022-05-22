@@ -1,0 +1,7 @@
+{
+  "name": "app-pets-healthy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

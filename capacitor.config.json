@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "app-pets-healthy",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
