@@ -34,7 +34,9 @@ IonPage,
 IonTitle, 
 IonToolbar,
 IonList,
-IonItem} from '@ionic/vue';
+IonItem,
+onIonViewDidEnter,
+IonButtons} from '@ionic/vue';
 import { reactive } from "vue";
 import UsersService from '@/services/users.service';
 
@@ -48,9 +50,14 @@ export default defineComponent({
         IonTitle, 
         IonToolbar,
         IonList,
-        IonItem
+        IonItem,
+        IonButtons
     },
     setup() {
+        //Hooks
+        onIonViewDidEnter(() => {
+            getUsers();
+        });
         const users: any[] = reactive([]);
         const getUsers = async () => {
             try {
